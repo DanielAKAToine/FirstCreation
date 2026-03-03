@@ -1,0 +1,201 @@
+:root {
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --primary: #e50914;
+    --text-main: #ffffff;
+    --text-dim: #b3b3b3;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    padding: 40px;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.busca-container {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+#inputGenero,
+select {
+    flex-grow: 1;
+    padding: 12px 20px;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#inputGenero:focus {
+    border-color: var(--primary);
+}
+
+
+#filmes {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+#filmes li {
+    list-style: none;
+    background: var(--bg-card);
+    width: 100%;
+    max-width: 750px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 10px;
+    transition: transform 0.3s ease;
+    border: 1px solid #333;
+}
+
+#filmes li:hover {
+    transform: translateY(-5px);
+    border-color: #444;
+}
+
+.movie-container {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.movie-container img {
+    width: 120px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.movie-info {
+    flex-grow: 1;
+}
+
+.movie-info strong {
+    font-size: 1.4rem;
+    color: var(--text-main);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.movie-info em {
+    color: var(--text-dim);
+    font-style: normal;
+}
+
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: filter 0.2s;
+}
+
+button:hover {
+    filter: brightness(1.2);
+}
+
+
+.btn-rating {
+    background: #333;
+    border: 1px solid #444;
+    margin: 10px 5px 0 0;
+}
+
+.btn-rating:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+#btnRemover {
+    margin-top: 20px;
+    width: auto;
+    padding: 12px 25px;
+    background-color: #8b0000;
+}
+
+.add-movie-form {
+    flex: 1;
+    min-width: 200px;
+    background: #2a2a2a;
+    color: white;
+    border: 2px solid #444;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.add-movie-form h2 {
+    color: var(--primary);
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
+    text-align: left;
+}
+
+.add-movie-form input {
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.add-movie-form input:focus {
+    border-color: var(--primary);
+    background: #333;
+    box-shadow: 0 0 8px rgba(229, 9, 20, 0.4);
+}
+
+.inputs-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+.add-movie-form button {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: var(--primary);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.add-movie-form button:hover {
+    transform: scale(1.03);
+    filter: brightness(1.2);
+}
